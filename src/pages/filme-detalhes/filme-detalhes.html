@@ -14,11 +14,8 @@
   <ion-card *ngIf="filme">
 
     <ion-item>
-      <ion-avatar item-start>
-        <img src="assets/imgs/avatar.png">
-      </ion-avatar>
-      <h2 class="feed_title">{{ filme.original_title}}</h2>
-      <p class="feed_date">{{ filme.release_date }}</p>
+      <h2>{{ filme.title}}</h2>
+      <p>{{ filme.release_date }}</p>
     </ion-item>
   
     <img [src]="'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path">
@@ -27,5 +24,23 @@
       <p>{{ filme.overview }}</p>
     </ion-card-content>
   
+  </ion-card>
+  <ion-card *ngIf="filme">
+    <ion-item>
+      <h3>Título Original:</h3>
+    </ion-item>
+  
+    <ion-card-content>
+      <p>{{ filme.original_title }}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="filme">
+    <ion-item>
+      <h3>Gênero:</h3>
+    </ion-item>
+  
+    <ion-card-content>
+      <p>{{ filme.genres[0].name }}</p>
+    </ion-card-content>
   </ion-card>
 </ion-content>

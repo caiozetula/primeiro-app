@@ -8,6 +8,12 @@
 </ion-header>
 
 <ion-content padding>
-  <img *ngIf="img" [src]="img" alt="">
+  <ion-card *ngIf="img">
+    <ion-item>
+      <h3>Foto de Perfil:</h3>
+    </ion-item>
+    <img [src]="img" alt="">
+  </ion-card>
+  
   <button ion-button block (click)="tirarFoto()">Tirar Foto</button>
 </ion-content>

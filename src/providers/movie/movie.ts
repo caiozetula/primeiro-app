@@ -15,11 +15,11 @@ export class MovieProvider {
   }
 
   getLatestMovies(page = 1){
-    return this.http.get(this.baseApiPath + `/movie/popular?page=${page}&api_key=35d3088942a6d1ea81d459205330f558`);
+    return this.http.get(this.baseApiPath + `/movie/popular?page=${page}&api_key=35d3088942a6d1ea81d459205330f558&language=pt-BR`);
   }
 
   getMovieDetails(filmeId){
-    return this.http.get(this.baseApiPath + `/movie/${filmeId}?api_key=35d3088942a6d1ea81d459205330f558`);
+    return this.http.get(this.baseApiPath + `/movie/${filmeId}?api_key=35d3088942a6d1ea81d459205330f558&language=pt-BR`);
   }
 
 }
